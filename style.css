@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0px;
+}
+body {
+  font-family: 'VT323', monospace;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 0px
+}
+.pageHeader {
+  box-sizing: border-box;
+  background-color: black;
+  display: inline-block;
+  height: fit-content;
+  width: 100vw;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-left: 3vw;
+  margin-bottom: 3vh;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+.pageTitle {
+  color: white;
+  text-align: left;
+  font-size: 35px;
+}
+.pageSubTitle {
+  color: white;
+  text-align: left;
+  font-size: 25px;
+}
+#mainContainer {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 95vw;
+  margin: 2.5vw;
+  padding: 2.5vw;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+.sectionContainer {
+  /*flex-direction: column;
+  justify-content: space-around;
+  align-content: flex-start;*/
+  margin: 10px;
+  width: 30%;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  top: 5px;
+}
+.sectionHeader {
+  /*display: block;*/
+  background-color: darkgrey;
+  max-width: 100%;
+  height: auto;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding: 5px;
+  padding-bottom: 5px;
+  top: 0px;
+}
+.sectionTitle {
+  color: white;
+  font-size: 3vh;
+}
+.contentContainer {
+  padding: 10px;
+  top: 0px;
+}
+#addFriendForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#friendCanvas {
+  width: 250px;
+  height: 250px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+#canvasCont {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+#seeFriendsDiv {
+  /*display: inline-block;*/
+  top: 0px;
+  display: flex;
+/*  flex-direction: row;*/
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+}
+.profile {
+  display: inline-block;
+  font-size: 15px;
+  width: 150px;
+  height: 300px;
+  margin: 5px;
+  padding: 10px;
+  border: ;
+}
+.nofriends {
+  align-self: flex-start;
+  justify-self: flex-start;
+  display: inline-block;
+  top: 0px;
+  /*text-align: center;*/
+  font-size: 25px;
+}
+.friend {
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  width: 45%;
+  height: auto;
+  margin: 5px;
+  padding: 10px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}

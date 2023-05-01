@@ -3,9 +3,61 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<title></title>
 </head>
 <body>
+	<div class = "pageHeader">
+		<h1 class = "pageTitle">MindSpace</h1>
+		<h2 class = "pageSubTitle">Create Your Friends</h2>
+	</div>
+	<div id = "mainContainer">
+		<div class = "sectionContainer" id = "profileContainer">
+			<div class = "sectionHeader">
+				<h1 class = "sectionTitle">Your Profile</h1>
+			</div>
+			<div class = "contentContainer">
+				<p>Sorry! Looks like you don't exist when no one's watching</p>
+			</div>
+		</div>
+		<div class = "sectionContainer" id = "friendsContainer">
+			<div class = "sectionHeader">
+				<h1 class = "sectionTitle">Your Friends</h1>
+			</div>
+			<div class = "contentContainer" id="seeFriendsDiv">
+				<div class = "profile">
+					<div class ="profPic">
 
+					</div>
+					<div class = "profText">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "sectionContainer" id = "createFriendsContainer">
+			<div class = "sectionHeader">
+				<h1 class = "sectionTitle">Create New Friend</h1>
+			</div>
+			<div class = "contentContainer">
+				<div id = "canvasCont">
+					<label for="friendCanvas">Profile Drawing: </label>
+					<canvas id="friendCanvas" name="friendCanvas"></canvas>
+				</div>
+				<form id="addFriendForm">
+					<label for="name">Friend's Name:</label>
+					<input type="text" id="name" name="name"><br>
+					<label for="birthday">Date of Birth:</label>
+					<input type="text" id="birthday" name="birthday"><br>
+					<label for="traits">Character Traits:</label>
+					<input type = "text" id = "traits" name="traits"><br>
+					<label for="nature">Good or Evil?:</label>
+					<input type = "text" id="nature" name="nature"><br>
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="script.js" charset="utf-8"></script>
 </body>
 </html>
