@@ -133,3 +133,11 @@ header {
   border-color: black;
   border-width: 2px;
 }
+.profPic {
+  width: 80%;
+  height: auto;
+  text-align: center;
+}
+.profName {
+  text-decoration: underline;
+}
