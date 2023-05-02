@@ -76,9 +76,9 @@ function storeFriend() {
 
   //console.log("friend added");
   //console.log(String(jsonFriends));
-  callFriendDisplay();
-  //var index = jsonFriends.length;
-  //displayFriends(jsonFriends[index-1]);
+  //callFriendDisplay();
+  var index = jsonFriends.length;
+  displayFriends(jsonFriends[index-1]);
 
  // displayFriends(jsonFriends);
 };
@@ -124,53 +124,7 @@ else {
 };*/
 //callFriendDisplay();
 
-/*const friends = [];
 
-function addFriend() {
-  const name = document.getElementById('name').value;
-  const birthday = document.getElementById('birthday').value;
-  const bio = document.getElementById('bio').value;
-
-  const friend = {
-    name,
-    birthday,
-    bio,
-  };
-
-  friends.push(friend);
-
-  displayFriends();
-}
-
-function displayFriends() {
-  const container = document.getElementById('friends-container');
-
-  container.innerHTML = '';
-
-  friends.forEach(friend => {
-    const friendDiv = document.createElement('div');
-    friendDiv.classList.add('friend');
-    friendDiv.innerHTML = `
-      <h2>${friend.name}</h2>
-      <p>Birthday: ${friend.birthday}</p>
-      <p>${friend.bio}</p>
-    `;
-    container.appendChild(friendDiv);
-  });
-}
-
-const addFriendButton = document.getElementById('add-friend');
-addFriendButton.addEventListener('click', () => {
-  const friendForm = document.getElementById('friend-form');
-  friendForm.style.display = 'block';
-});
-
-const friendForm = document.getElementById('friend-form');
-friendForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  addFriend();
-  friendForm.style.display = 'none';
-});*/
 
 // /*var canvas = document.getElementById("friendCanvas");
 // var ctx = canvas.getContext("2d");
@@ -330,32 +284,3 @@ friendForm.addEventListener('submit', (event) => {
 //   displayFriends();
 // }
 
-// function displayFriends() {
-//   const container = document.getElementById('friends-container');
-
-//   container.innerHTML = '';
-
-//   friends.forEach(friend => {
-//     const friendDiv = document.createElement('div');
-//     friendDiv.classList.add('friend');
-//     friendDiv.innerHTML = `
-//       <h2>${friend.name}</h2>
-//       <p>Birthday: ${friend.birthday}</p>
-//       <p>${friend.bio}</p>
-//     `;
-//     container.appendChild(friendDiv);
-//   });
-// }
-
-// const addFriendButton = document.getElementById('add-friend');
-// addFriendButton.addEventListener('click', () => {
-//   const friendForm = document.getElementById('friend-form');
-//   friendForm.style.display = 'block';
-// });
-
-// const friendForm = document.getElementById('friend-form');
-// friendForm.addEventListener('submit', (event) => {
-//   event.preventDefault();
-//   addFriend();
-//   friendForm.style.display = 'none';
-// });*/
