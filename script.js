@@ -10,52 +10,67 @@ var jsonFriends = [
     'caption': "Sorry! Looks like you don't exist when no one's watching"
   },
 ];
+var colors = ['#39FF14', '#00FFEE', '#FFA1FF', '#FF45D0'];
 
 function displaySelf(jason) {
   var friends = document.getElementById('seeFriendsDiv');
   const friendDiv = document.createElement('div');
   friendDiv.classList.add('friend');
+  friendDiv.style.backgroundColor = colors[0];
   friends.appendChild(friendDiv);
   const profilePic = document.createElement('img');
   //const profilePic = document.createElement('img');
   profilePic.src = 'placeholder.jpg';
   profilePic.classList.add('profPic');
   friendDiv.appendChild(profilePic);
+  const textDiv = document.createElement('div');
+  textDiv.classList.add("textDiv");
+  friendDiv.appendChild(textDiv);
   const friendName = document.createElement('p');
   friendName.classList.add("profName");
   friendName.textContent = "Name: " + jason['name'];
-  friendDiv.appendChild(friendName);
+  textDiv.appendChild(friendName);
   const caption = document.createElement('p');
   caption.textContent = jason['caption'];
-  friendDiv.appendChild(caption);
+  textDiv.appendChild(caption);
   //for (let i = 0; i < jsonFriends.length; i++) {
-}
+};
 function displayFriends(jason) {
   var friends = document.getElementById('seeFriendsDiv');
   const friendDiv = document.createElement('div');
   friendDiv.classList.add('friend');
+  let friendColor = (jsonFriends.length - 1) % 4;
+  friendDiv.style.backgroundColor = colors[friendColor];
   friends.appendChild(friendDiv);
   const profilePic = document.createElement('img');
   profilePic.src = 'placeholder.jpg';
   profilePic.classList.add('profPic');
   friendDiv.appendChild(profilePic);
+  const textDiv = document.createElement('div');
+  textDiv.classList.add("textDiv");
+  friendDiv.appendChild(textDiv);
   const friendName = document.createElement('p');
   friendName.classList.add("profName");
   friendName.textContent = "Name: " + jason['name'];
-  friendDiv.appendChild(friendName);
+  textDiv.appendChild(friendName);
   const friendBirthday = document.createElement('p');
-  friendBirthday.textContent = "Birthday: " + jason['birthday'];
-  friendDiv.appendChild(friendBirthday);
+  friendBirthday.textContent = "Bio: " + jason['birthday'];
+  textDiv.appendChild(friendBirthday);
   const friendTraits = document.createElement('p');
-  friendTraits.textContent = "Traits: " + "\n" + jason['traits'];  
+  friendTraits.textContent = "Traits: " + jason['traits'];  
   //};
-  friendDiv.appendChild(friendTraits);
+  textDiv.appendChild(friendTraits);
+  const mutuals = document.createElement('p');
+  mutuals.textContent = "Mutual Friends: " + jason ['nature'];
+  textDiv.appendChild(mutuals);
 };
+
 function callFriendDisplay() {
   for (let i = 1; i <jsonFriends.length; i++) {
     displayFriends(jsonFriends[i]);
   }
 }
+//let friendsCount = 0;
 function storeFriend() {
  // var newFriend = jsonFriends[newName] = {}
   var newFriend = {};
@@ -65,7 +80,7 @@ function storeFriend() {
   var friendNatureField = document.querySelector('#nature');
   var newName = friendNameField.value;
   newFriend['name'] = newName;
-  newFriend['birthday'] = String(friendDOBField.value);
+  newFriend['birthday'] = friendDOBField.value;
   newFriend['traits'] = friendTraitsField.value;
   newFriend['nature'] = friendNatureField.value;
   jsonFriends.push(newFriend);
